@@ -54,7 +54,7 @@ function commit_changes() {
 
 function create_pull_request() {
   hub pull-request -b develop
-  echo "Copy the above URL and get that shizz merged"
+  echo "Copy the above URL and get it approved and merged"
 }
 
 function cleanup() {
