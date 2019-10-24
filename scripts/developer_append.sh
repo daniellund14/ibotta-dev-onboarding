@@ -35,7 +35,7 @@ function checkout_branch() {
 function get_user_info() {
   read -p "Enter Customer ID:" -r customer_id
 
-  read -p "Enter Customer Name/Description:" -r customer
+  read -p "Enter Customer Name/Description:" -r customer_name
 
   echo "${customer_id},${customer_name}" >> developer_accounts.csv
 }
@@ -74,8 +74,8 @@ function run_through_customer_addition() {
   clone_ibotta_monolith
   checkout_branch
   get_user_info
-  commit_changes
-  create_pull_request
+  # commit_changes
+  # create_pull_request
   cleanup
 }
 
