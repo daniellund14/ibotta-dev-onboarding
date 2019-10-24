@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-FILE_NAME = "test.csv"
 
 function setup() {
     cd $HOME
@@ -47,7 +46,7 @@ function commit_changes() {
   branch_name="(unnamed branch)"     # detached HEAD
   branch_name=${branch_name##refs/heads/}
   echo $branch_name
-  git add ./test.csv
+  git add .
   git commit -m "Added name to customers list"
   git push origin $branch_name
 }
@@ -65,7 +64,7 @@ function cleanup() {
     select yn in "Yes" "No"; do
         case $yn in
             Yes ) brew uninstall hub; break;;
-            No ) ;;
+            No ) break;;
         esac
     done
 }
