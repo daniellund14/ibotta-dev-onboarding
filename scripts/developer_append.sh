@@ -74,8 +74,8 @@ function run_through_customer_addition() {
   clone_ibotta_monolith
   checkout_branch
   get_user_info
-  # commit_changes
-  # create_pull_request
+  commit_changes
+  create_pull_request
   cleanup
 }
 
